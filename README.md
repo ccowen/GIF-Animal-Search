@@ -1,1 +1,1 @@
-# GIF Animal Search
+# GIFanimalSearch
