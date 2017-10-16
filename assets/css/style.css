@@ -13,6 +13,16 @@ footer {
   padding: 30px 0;
 }
 
+.panel-footer {
+  background-color: blue;
+}
+
+.animalGif {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------

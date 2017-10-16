@@ -51,12 +51,12 @@ function displayAnimalInfo() {
 	  // Creating an element to hold the image
 	  for (var i = 0; i < response.data.length; i++) {
 
-	  	var image = $("<img src='" + response.data[i].images.fixed_width.url + "'>");
+	  	var image = $("<img class='panel-body animalGif' src='" + response.data[i].images.fixed_width.url + "'>");
 
-	  	var text = ("<p><a class='btn btn-secondary' href=" + response.data[i].images.fixed_width.url + "role='button'>Go to Link</a></p>")
+	  	var text = $("<p class='panel-footer'><a class='btn btn-secondary' href=" + response.data[i].images.original.url + "role='button'>Go to Link</a></p>")
 	  	
 	  	// Creating a div to hold the gif, maybe plus other info
-	    var gifDiv = $("<div class='col-6 col-lg-4'>");
+	    var gifDiv = $("<div class='col-6 col-lg-4 panel panel-default'>");
 
 	    // append the gif div the main area
 	    $("#animalGifHere").append(gifDiv);
