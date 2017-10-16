@@ -53,10 +53,10 @@ function displayAnimalInfo() {
 
 	  	var image = $("<img class='panel-body animalGif' src='" + response.data[i].images.fixed_width.url + "'>");
 
-	  	var text = $("<p class='panel-footer'><a class='btn btn-secondary' href=" + response.data[i].images.original.url + "role='button'>Go to Link</a></p>")
+	  	var text = $("<p class='panel-footer'><a class='btn btn-secondary' href=" + response.data[i].images.original.url + "role='button'>Go to Link &raquo;</a></p>")
 	  	
 	  	// Creating a div to hold the gif, maybe plus other info
-	    var gifDiv = $("<div class='col-6 col-lg-4 panel panel-default'>");
+	    var gifDiv = $("<div class='col-6 col-lg-4 panel panel-default grid-item'>");
 
 	    // append the gif div the main area
 	    $("#animalGifHere").append(gifDiv);
@@ -84,5 +84,22 @@ $(document).ready(function() {
 
 	// Adding a click event listener to all elements with a class of "list-group-item"
     $(document).on("click", ".list-group-item", displayAnimalInfo);
+
+    $('.grid').masonry({
+	  // options
+	  itemSelector: '.grid-item',
+	  columnWidth: 500
+	});
+
+    // testing masonry, are you working?
+	var $grid = $('.grid').masonry({
+	  columnWidth: 80
+	});
+	// change size of item by toggling gigante class
+	$grid.on( 'click', '.grid-item', function() {
+	  $(this).toggleClass('gigante');
+	  // trigger layout after item size changes
+	  $grid.masonry('layout');
+	});
 
 }); 
