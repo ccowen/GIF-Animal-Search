@@ -44,8 +44,7 @@ function displayAnimalInfo() {
 	  method: "GET"
 	}).done(function(response) {
 
-	  // Creating a img to hold the gif
-	  var gifDiv = $("<div class='col-6 col-lg-4'>");
+	  // Creating a div to hold the gif plus other info
 
 	  /* // Storing the rating data
 	  var rating = response.Rated;
@@ -74,20 +73,31 @@ function displayAnimalInfo() {
 	  // Appending the plot
 	  movieDiv.append(pThree); */
 
+	  $("#animalGifHere").empty();
+
 	  // Creating an element to hold the image
 	  for (var i = 0; i < response.data.length; i++) {
 
-	  	var image = $("<img src='" + response.data[i].images.downsized_medium.url + "'>");
+	  	var heading = ("<h2 class='gifHeading'>" + animal + " " + [i + 1] + "</h2>");
+	  	var image = $("<img src='" + response.data[i].images.fixed_width.url + "'>");
+	  	var text = ("<p class='gifText'>" + response.data[i].images.fixed_width.url + "</p>")
+	  	
+	  	// Creating a div to hold the gif, maybe plus other info
+	    var gifDiv = $("<div class='col-6 col-lg-4'>");
 
-	    // Appending the image
+	    // append the gif div the main area
+	    $("#animalGifHere").append(gifDiv);
+
+	    // Appending the heading to the gif div
+	    gifDiv.append(heading);
+
+	    // Appending the image to the gif div
 	    gifDiv.append(image);
 
+	    // Appending the text to the gif div
+	    gifDiv.append(text);
+
 	  };
-
-
-
-	  // Putting the entire movie above the previous movies
-	  $("#animalGifHere").prepend(gifDiv);
 
 	});
 
