@@ -13,22 +13,32 @@ footer {
   padding: 30px 0;
 }
 
-.panel-footer {
-  background-color: blue;
+.container {
+  margin: 0px auto;
 }
 
 .animalGif {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
+  width:100%;
 }
 
-.grid-item { 
-  width: 200px; 
+.masonry { /* Masonry container */
+    column-count: 4;
+    column-gap: 1em;
 }
 
-.grid-item--width2 {
-  width: 400px; 
+.item { /* Masonry bricks or child elements */
+    display: inline-block;
+    margin: 0 0 0em;
+    width: 100%;
+}
+
+.gifButton {
+  margin-right: 0px; 
+  margin-top: -30px;
+  width: 40px;
+  height: 15px;
+  font-size: 12px;
+  padding: 1px 2px 2px 2px;
 }
 
 /*
