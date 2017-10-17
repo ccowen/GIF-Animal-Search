@@ -15,6 +15,8 @@ var topics = [
 // Function for displaying animal buttons
 function renderLinks() {
 
+	$(".list-group").empty();
+
 	// Looping through the array of topics
 	for (var i = 0; i < topics.length; i++) {
 
@@ -84,5 +86,18 @@ $(document).ready(function() {
 
 	// Adding a click event listener to all elements with a class of "list-group-item"
     $(document).on("click", ".list-group-item", displayAnimalInfo);
+
+          // This function handles events where a movie button is clicked
+      $("#add-animal").on("click", function(event) {
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var newTerm = $("#search-input").val().trim();
+
+        // Adding movie from the textbox to our array
+        topics.push(newTerm);
+
+        // Calling renderLinks which handles the processing of our movie array
+        renderLinks();
+      });
     
 }); 
