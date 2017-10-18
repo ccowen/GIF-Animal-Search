@@ -32,7 +32,6 @@ function renderLinks() {
 
 	// store the data name of the active button
 	var dataOfActiveButton = $(".active").attr("data-name");
-	console.log(dataOfActiveButton);
 
 	// emoty the list group of previous data, so when a new button is added, everything doesn't repeat itself
 	$(".list-group").empty();
@@ -40,22 +39,28 @@ function renderLinks() {
 	// Looping through the array of topics
 	for (var i = 0; i < topics.length; i++) {
 
+		// searh for the data name of the active button in the array
 		var activeLink = search(dataOfActiveButton, topics);
 
 		// Then dynamicaly generating links for each topic in the array
 		var a = $("<a>");
+
 		// Adding a class
 		a.addClass("list-group-item");
+
 		// Added a data-attribute
 		a.attr("data-name", topics[i]);
 
+		// if there is no active button, 
 		if (dataOfActiveButton == undefined) {
+			// the links are not active
 			a.addClass("list-group-item");
-		} 
+		}
+		//else if- so there is an active button- is the data equal to the attribute of a link
 		else if (dataOfActiveButton == a.attr("data-name")) {
+			// the links with the data namer of the previous active button are given an active class
 			a.attr("data-name", dataOfActiveButton).addClass("active");
 		}
-	
 
 		// Added a data-attribute
 		a.attr("href", "#");
