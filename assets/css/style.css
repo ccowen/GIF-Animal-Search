@@ -41,6 +41,13 @@ footer {
   padding: 1px 2px 2px 2px;
 }
 
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------
