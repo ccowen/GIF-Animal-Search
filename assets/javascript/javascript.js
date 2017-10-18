@@ -138,13 +138,20 @@ $(document).ready(function() {
 		// This line grabs the input from the textbox
 		var newTerm = $("#search-input").val().trim();
 
+		// capatalize first letter
 		var newTermUpper = capitalizeFirstLetter(newTerm);
 
-		// Adding from the textbox to our array
-		topics.unshift(newTermUpper);
+		// if the term us not blank, continue to
+		if (newTermUpper.length > 0){
 
-		// calling renderLinks, handles the processing of our topics array
-		renderLinks();
+			// Adding from the textbox to our array
+			topics.unshift(newTermUpper);
+
+			// calling renderLinks, handles the processing of our topics array
+			renderLinks();
+
+		}
+
 	});
     
 }); 
