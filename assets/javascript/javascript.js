@@ -8,9 +8,23 @@ var topics = [
 	"Goldfish",
 	"Bird",
 	"Skunk",
+	"Dolphin",
+	"Zebra",
 	"Chicken",
 	"Goat",
-	"Pig"
+	"Pig",
+	"Monkey",
+	"Hen",
+	"Whale",
+	"Peacock",
+	"Shrimp",
+	"Duck",
+	"Goose",
+	"Tiger",
+	"Elephant",
+	"Penguin",
+	"Lobster",
+	"Bear"
 ]
 
 // function to capatalize the first letter of a string
