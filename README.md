@@ -1,6 +1,6 @@
 # GIF Animal Search
 
-use of giphy api to search the best animal gifs
+AJAX call to giphy to search the best animal gifs
 
 ## [demo](https://ccowen.github.io/GIF-Animal-Search/)   //  sample image
 
