@@ -1,4 +1,4 @@
-# GIFanimalSearch
+# GIF Animal Search
 
 use of giphy api to search the best animal gifs
 
