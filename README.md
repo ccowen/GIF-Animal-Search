@@ -1,8 +1,7 @@
 # GIFanimalSearch
 
-
-
+use of giphy api to search the best animal gifs
 
 ## [demo](https://ccowen.github.io/GIF-Animal-Search/)   //  sample image
 
-![sample image](assets/colorQuizGIF_randomTiming.gif?raw=true "Title")
+![sample image](assets/gifAnimalSearch.png?raw=true "Title")
